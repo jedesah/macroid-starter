@@ -3,11 +3,11 @@ import android.Dependencies.{LibraryDependency, aar}
 
 android.Plugin.androidBuild
 
-platformTarget in Android := "android-19"
+platformTarget in Android := "android-21"
 
 name := "macroid-starter"
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.4"
 
 run <<= run in Android
 
@@ -27,7 +27,7 @@ libraryDependencies ++= Seq(
   aar("org.macroid" %% "macroid" % "2.0.0-M3"),
   aar("com.google.android.gms" % "play-services" % "4.0.30"),
   aar("com.android.support" % "support-v4" % "20.0.0"),
-  compilerPlugin("org.brianmckenna" %% "wartremover" % "0.10")
+  compilerPlugin("org.brianmckenna" %% "wartremover" % "0.11")
 )
 
 proguardScala in Android := true
